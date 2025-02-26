@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALMY - www.valmy.us</title>
+    <style>
+        /* Ajustes generales */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            overflow: auto; /* Permite exploración si es necesario */
+        }
+
+        /* 🔹 Imagen en DESKTOP (Ocupando toda la pantalla) */
+        @media (min-width: 1024px) {
+            img {
+                width: 100vw; /* Ocupar todo el ancho */
+                height: 100vh; /* Ocupar todo el alto */
+                object-fit: cover; /* Asegura que la imagen llene toda la pantalla sin distorsión */
+            }
+
+            body {
+                overflow: hidden; /* Evita scroll innecesario */
+            }
+        }
+
+        /* 🔹 Mantener la imagen en TELÉFONOS (Sin cambios) */
+        @media (max-width: 768px) {
+            body {
+                display: block;
+                overflow: scroll; /* Permite desplazamiento */
+            }
+
+            img {
+                width: auto;
+                height: auto;
+                min-width: 100vw;
+                min-height: 100vh;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 🔹 Aquí se carga la imagen "valmyv.jpg" -->
+    <img src="valmyv.jpg" alt="VALMY - Belleza y Estilo">
+
+</body>
+</html>
