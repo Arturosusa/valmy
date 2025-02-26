@@ -15,45 +15,42 @@
             align-items: center;
             width: 100vw;
             height: 100vh;
-            overflow: auto; /* Permite exploración si es necesario */
+            overflow: auto; /* Permite exploración en desktop y móvil */
         }
 
-        /* 🔹 Imagen en DESKTOP (Ocupando toda la pantalla) */
+        /* 🔹 Imagen en DESKTOP (Un poco más pequeña para encajar mejor) */
         @media (min-width: 1024px) {
             img {
-                width: 100vw; /* Ocupar todo el ancho */
-                height: 100vh; /* Ocupar todo el alto */
-                object-fit: cover; /* Asegura que la imagen llene toda la pantalla sin distorsión */
+                width: 98vw; /* Reduce el ancho un 2% */
+                height: 98vh; /* Reduce la altura un 2% */
+                object-fit: contain; /* Ajusta la imagen sin recortar */
             }
 
             body {
-                overflow: hidden; /* Evita scroll innecesario */
+                overflow: scroll; /* Permite desplazamiento si es necesario */
             }
         }
 
-        /* 🔹 Mantener la imagen en TELÉFONOS (Sin cambios) */
-        @media (max-width: 768px) {
+        /* 🔹 Ajustes para TELÉFONOS en VERTICAL (Exploración completa) */
+        @media (max-width: 768px) and (orientation: portrait) {
             body {
                 display: block;
-                overflow: scroll; /* Permite desplazamiento */
+                overflow: scroll; /* Permite desplazamiento en todas direcciones */
             }
 
             img {
-                width: auto;
-                height: auto;
-                min-width: 100vw;
-                min-height: 100vh;
+                width: auto; /* Se ajusta al tamaño real */
+                height: auto; /* Se ajusta al tamaño real */
+                min-width: 100vw; /* Asegura que la imagen sea al menos del ancho del teléfono */
+                min-height: 100vh; /* Asegura que la imagen sea al menos del alto del teléfono */
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- 🔹 Verifica que la imagen esté en la misma carpeta -->
-    <img src="valmyv.jpg" alt="VALMY - Belleza y Estilo">
-
-    <!-- 🔹 Si la imagen está en una subcarpeta, usa esta opción -->
-    <!-- <img src="imagenes/valmyv.jpg" alt="VALMY - Belleza y Estilo"> -->
+    <!-- 🔹 Aquí se carga la imagen "imagenv.jpg" -->
+    <img src="imagenv.jpg" alt="VALMY - Belleza y Estilo">
 
 </body>
 </html>
