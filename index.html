@@ -15,41 +15,43 @@
             align-items: center;
             width: 100vw;
             height: 100vh;
-            overflow: auto; /* Permite exploración si es necesario */
+            overflow: auto; /* Permite exploración en desktop y móvil */
         }
 
-        /* 🔹 Imagen en DESKTOP (Ocupando toda la pantalla) */
+        /* 🔹 Imagen en DESKTOP (Ocupando la pantalla con movilidad) */
         @media (min-width: 1024px) {
             img {
-                width: 100vw; /* Ocupar todo el ancho */
-                height: 100vh; /* Ocupar todo el alto */
-                object-fit: cover; /* Asegura que la imagen llene toda la pantalla sin distorsión */
+                width: auto; /* Mantiene la proporción */
+                height: auto; /* Mantiene la proporción */
+                min-width: 100vw; /* Asegura que ocupe al menos el ancho de la pantalla */
+                min-height: 100vh; /* Asegura que ocupe al menos el alto de la pantalla */
+                object-fit: contain; /* Ajusta la imagen sin recortes */
             }
 
             body {
-                overflow: hidden; /* Evita scroll innecesario */
+                overflow: scroll; /* Permite desplazarse con los cursores */
             }
         }
 
-        /* 🔹 Mantener la imagen en TELÉFONOS (Sin cambios) */
-        @media (max-width: 768px) {
+        /* 🔹 Ajustes para TELÉFONOS en VERTICAL (Exploración completa) */
+        @media (max-width: 768px) and (orientation: portrait) {
             body {
                 display: block;
-                overflow: scroll; /* Permite desplazamiento */
+                overflow: scroll; /* Permite desplazamiento en todas direcciones */
             }
 
             img {
-                width: auto;
-                height: auto;
-                min-width: 100vw;
-                min-height: 100vh;
+                width: auto; /* Se ajusta al tamaño real */
+                height: auto; /* Se ajusta al tamaño real */
+                min-width: 100vw; /* Asegura que la imagen sea al menos del ancho del teléfono */
+                min-height: 100vh; /* Asegura que la imagen sea al menos del alto del teléfono */
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- 🔹 Aquí se carga la imagen "valmyv.jpg" -->
+    <!-- 🔹 Aquí se carga la imagen "imagenv.jpg" -->
     <img src="imagenv.jpg" alt="VALMY - Belleza y Estilo">
 
 </body>
