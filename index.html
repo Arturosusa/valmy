@@ -15,19 +15,15 @@
             align-items: center;
             width: 100vw;
             height: 100vh;
-            overflow: auto; /* Permite exploración en desktop y móvil */
+            overflow: hidden; /* Evita scroll innecesario */
         }
 
-        /* 🔹 Imagen en DESKTOP (Un poco más pequeña para encajar mejor) */
+        /* 🔹 Imagen en DESKTOP (Ajuste exacto a la pantalla) */
         @media (min-width: 1024px) {
             img {
-                width: 98vw; /* Reduce el ancho un 2% */
-                height: 98vh; /* Reduce la altura un 2% */
-                object-fit: contain; /* Ajusta la imagen sin recortar */
-            }
-
-            body {
-                overflow: scroll; /* Permite desplazamiento si es necesario */
+                width: 100vw; /* Ocupar todo el ancho exacto */
+                height: 100vh; /* Ocupar todo el alto exacto */
+                object-fit: cover; /* Asegura que la imagen llene toda la pantalla sin dejar espacios */
             }
         }
 
