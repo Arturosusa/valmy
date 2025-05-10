@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VALMY - www.valmy.us</title>
     <style>
-        /* Ajustes generales */
-        <a href="https://www.amazon.com/dp/https://www.amazon.com/dp/B0DQK5T6TC" target="_blank">
-  <button style="padding: 10px 20px; background-color: #ff9900; color: white; border: none; border-radius: 5px; cursor: pointer;">
-    BUY IN AMAZON
-  </button>
-</a>
         body {
             margin: 0;
             padding: 0;
@@ -20,38 +14,57 @@
             align-items: center;
             width: 100vw;
             height: 100vh;
-            overflow: hidden; /* Evita scroll innecesario */
+            overflow: hidden;
         }
 
-        /* 🔹 Imagen en DESKTOP (Ajuste exacto a la pantalla) */
         @media (min-width: 1024px) {
             img {
-                width: 100vw; /* Ocupar todo el ancho exacto */
-                height: 100vh; /* Ocupar todo el alto exacto */
-                object-fit: cover; /* Asegura que la imagen llene toda la pantalla sin dejar espacios */
+                width: 100vw;
+                height: 100vh;
+                object-fit: cover;
             }
         }
 
-        /* 🔹 Ajustes para TELÉFONOS en VERTICAL (Exploración completa) */
         @media (max-width: 768px) and (orientation: portrait) {
             body {
                 display: block;
-                overflow: scroll; /* Permite desplazamiento en todas direcciones */
+                overflow: scroll;
             }
 
             img {
-                width: auto; /* Se ajusta al tamaño real */
-                height: auto; /* Se ajusta al tamaño real */
-                min-width: 100vw; /* Asegura que la imagen sea al menos del ancho del teléfono */
-                min-height: 100vh; /* Asegura que la imagen sea al menos del alto del teléfono */
+                width: auto;
+                height: auto;
+                min-width: 100vw;
+                min-height: 100vh;
             }
+        }
+
+        .boton-amazon {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-decoration: none;
+        }
+
+        .boton-amazon button {
+            padding: 10px 20px;
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
 
-    <!-- 🔹 Aquí se carga la imagen "imagenv.jpg" -->
     <img src="imagenv.jpg" alt="VALMY - Belleza y Estilo">
+
+    <a class="boton-amazon" href="https://www.amazon.com/dp/B0DQK5T6TC" target="_blank">
+        <button>BUY IN AMAZON</button>
+    </a>
 
 </body>
 </html>
