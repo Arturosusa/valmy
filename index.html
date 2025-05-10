@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,61 +10,64 @@
             padding: 0;
             background-color: #f8f8f8;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             width: 100vw;
             height: 100vh;
             overflow: hidden;
+            text-align: center;
+            font-family: Arial, sans-serif;
         }
 
-        @media (min-width: 1024px) {
-            img {
-                width: 100vw;
-                height: 100vh;
-                object-fit: cover;
-            }
+        img {
+            max-width: 100%;
+            height: auto;
         }
 
-        @media (max-width: 768px) and (orientation: portrait) {
-            body {
-                display: block;
-                overflow: scroll;
-            }
-
-            img {
-                width: auto;
-                height: auto;
-                min-width: 100vw;
-                min-height: 100vh;
-            }
+        .button {
+            margin-top: 20px;
         }
 
-        .boton-amazon {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
+        .button a {
             text-decoration: none;
         }
 
-        .boton-amazon button {
-            padding: 15px 25px;
+        .button button {
+            padding: 10px 20px;
             background-color: #ff9900;
             color: white;
             border: none;
-            border-radius: 6px;
+            border-radius: 5px;
             cursor: pointer;
-            font-size: 22px;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .email {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #333;
         }
     </style>
 </head>
 <body>
 
-    <img src="imagenv.jpg" alt="VALMY - Belleza y Estilo">
+    <!-- Product Image -->
+    <img src="imagenv.jpg" alt="VALMY - Beauty and Style">
 
-    <a class="boton-amazon" href="https://www.amazon.com/dp/B0DQK5T6TC" target="_blank">
-        <button>SHOP ON AMAZON</button>
-    </a>
+    <!-- Amazon Purchase Button -->
+    <div class="button">
+        <a href="https://www.amazon.com/dp/B0DQK5T6TC" target="_blank">
+            <button>Buy on Amazon</button>
+        </a>
+    </div>
+
+    <!-- Direct Order by Email -->
+    <div class="email">
+        Prefer to order directly? Email us at <strong>contact@valmy.us</strong>
+    </div>
 
 </body>
 </html>
