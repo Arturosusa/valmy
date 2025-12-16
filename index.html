@@ -1,115 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VALMY - www.valmy.us</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VALMY - www.valmy.us</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
 
-        .container {
-            position: relative;
-            width: 100vw;
-            height: 100vh;
-        }
+    .container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
 
-        .container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        .sidebar-content {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 200px;
-            height: 100%;
-            background-color: black;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            padding-top: 20px;
-        }
+    .sidebar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 180px;
+      height: 100%;
+      background-color: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+      box-sizing: border-box;
+    }
 
-        .sidebar-content h2 {
-            margin-top: 10px;
-            font-size: 20px;
-        }
+    .shop-title {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
 
-        .button-area {
-            margin-top: auto;
-            margin-bottom: 60px;
-            text-align: center;
-        }
+    .button-area {
+      margin-bottom: auto;
+    }
 
-        .button-area a {
-            text-decoration: none;
-        }
+    .button-area a {
+      text-decoration: none;
+    }
 
-        .button-area button {
-            padding: 10px 20px;
-            background-color: #ff9900;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: bold;
-        }
+    .button-area button {
+      padding: 10px 16px;
+      background-color: #ff9900;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+    }
 
-        .email-text {
-            font-size: 12px;
-            color: white;
-            text-align: center;
-            margin-bottom: 20px;
-        }
+    .email-text {
+      font-size: 12px;
+      color: white;
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-        @media (max-width: 768px) {
-            .sidebar-content {
-                width: 100%;
-                height: auto;
-                position: relative;
-                flex-direction: column;
-                align-items: center;
-                padding: 10px;
-            }
+    .email-text strong {
+      color: #fff;
+    }
 
-            .container img {
-                height: auto;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: column;
+        padding: 10px;
+      }
+
+      .container img {
+        height: auto;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <img src="web2-valmy.jpg" alt="VALMY - Beauty and Style" />
 
-    <div class="container">
-        <img src="web2-valmy.jpg" alt="VALMY - Beauty and Style">
+    <div class="sidebar">
+      <div class="shop-title">SHOP NOW</div>
 
-        <div class="sidebar-content">
-            <h2>SHOP NOW</h2>
+      <div class="button-area">
+        <a href="https://www.amazon.com/dp/B0DQK5T6TC" target="_blank">
+          <button>Buy on Amazon</button>
+        </a>
+      </div>
 
-            <div class="button-area">
-                <a href="https://www.amazon.com/dp/B0DQK5T6TC" target="_blank">
-                    <button>Buy on Amazon</button>
-                </a>
-            </div>
-
-            <div class="email-text">
-                Prefer to order directly?<br>Email us at<br><strong>contact@valmy.us</strong>
-            </div>
-        </div>
+      <div class="email-text">
+        Prefer to order directly?<br />
+        Email us at<br />
+        <strong>contact@valmy.us</strong>
+      </div>
     </div>
-
+  </div>
 </body>
 </html>
