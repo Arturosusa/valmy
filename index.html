@@ -9,9 +9,6 @@
             margin: 0;
             padding: 0;
             background-color: #f8f8f8;
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
             font-family: Arial, sans-serif;
         }
 
@@ -27,11 +24,31 @@
             object-fit: cover;
         }
 
-        .button-area {
+        .right-panel {
             position: absolute;
-            bottom: 110px;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 100%;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 20px;
+        }
+
+        .right-panel h2 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .button-area {
+            margin-top: auto;
+            margin-bottom: 70px;
             text-align: center;
         }
 
@@ -40,58 +57,4 @@
         }
 
         .button-area button {
-            padding: 10px 20px;
-            background-color: #ff9900;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .amazon-link {
-            margin-top: 10px;
-            font-size: 14px;
-            color: #000;
-        }
-
-        .amazon-link a {
-            color: #0000ee;
-            text-decoration: underline;
-        }
-
-        .email-text {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 14px;
-            color: #333;
-            background-color: rgba(255, 255, 255, 0.6);
-            padding: 6px 12px;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <img src="web2 valmy.jpg" alt="VALMY - Beauty and Style">
-
-        <div class="button-area">
-            <a href="https://www.amazon.com/dp/B0DQK5T6TC" target="_blank">
-                <button>Buy on Amazon</button>
-            </a>
-            <div class="amazon-link">
-                Or visit: <a href="https://www.amazon.com/dp/B0DQK5T6TC" target="_blank">https://www.amazon.com/dp/B0DQK5T6TC</a>
-            </div>
-        </div>
-
-        <div class="email-text">
-            Prefer to order directly? Email us at <strong>contact@valmy.us</strong>
-        </div>
-    </div>
-
-</body>
-</html>
+            padding
