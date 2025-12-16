@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VALMY - www.valmy.us</title>
   <style>
     * {
@@ -11,97 +11,115 @@
       box-sizing: border-box;
     }
 
-    body, html {
-      height: 100%;
+    body {
       font-family: Arial, sans-serif;
-    }
-
-    .main-container {
+      background-color: #f8f8f8;
       display: flex;
       height: 100vh;
-      width: 100vw;
     }
 
-    .content-area {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #fff;
-    }
-
-    .content-area img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-
-    .sidebar {
-      width: 250px;
+    .sidebar-left, .sidebar-right {
+      width: 18%;
       background-color: #000;
       color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 20px;
+    }
+
+    .sidebar-left {
+      font-size: 13px;
+      text-align: left;
+      justify-content: center;
+    }
+
+    .sidebar-right {
       justify-content: flex-start;
       padding-top: 40px;
     }
 
-    .sidebar h2 {
+    .sidebar-right h2 {
       font-size: 20px;
       margin-bottom: 40px;
     }
 
-    .sidebar a.button-link {
-      text-decoration: none;
+    .sidebar-right .button-area {
+      margin-bottom: 30px;
     }
 
-    .sidebar button {
+    .sidebar-right button {
       padding: 10px 20px;
       background-color: #ff9900;
       color: white;
       border: none;
       border-radius: 5px;
+      cursor: pointer;
       font-size: 16px;
       font-weight: bold;
-      cursor: pointer;
-      margin-bottom: 30px;
     }
 
-    .sidebar .email {
+    .sidebar-right .email-text {
       font-size: 13px;
       text-align: center;
       margin-top: auto;
-      margin-bottom: 20px;
     }
 
-    .sidebar .email a {
-      color: #ffffff;
-      text-decoration: underline;
+    .main-content {
+      flex: 1;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-content img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }
   </style>
 </head>
 <body>
 
-  <div class="main-container">
+  <div class="sidebar-left">
+    <p><strong>VALMY: Vogue Aesthetic • Luxury • Mystic</strong></p>
+    <br/>
+    <p>
+      VALMY was created from a vision where beauty is felt, breathed, and lived as a daily art form. Inspired by the Vogue spirit, the brand blends a refined, minimalist aesthetic with a touch of mystic allure, elevating both personal rituals and the atmosphere of every home.
+    </p>
+    <br/>
+    <p>
+      Its skincare innovations reveal luminosity, purity, and elegance, while its home fragrances transform any space into a sensory sanctuary filled with warmth and sophistication. Each creation embodies a balance between science, design, and a Luxury essence that captivates the senses.
+    </p>
+    <br/>
+    <p>
+      For VALMY, luxury is not excess—it's an intimate, soft, deeply aesthetic experience. An invitation to discover beauty as energy, as ambiance, and as identity.
+    </p>
+    <br/>
+    <p>
+      A world where skin glows, the home breathes, and mysticism becomes style.
+    </p>
+  </div>
 
-    <div class="content-area">
-      <img src="web2-valmy.jpg" alt="VALMY - Beauty and Style">
-    </div>
+  <div class="main-content">
+    <img src="web2 valmy.jpg" alt="VALMY - Beauty and Style" />
+  </div>
 
-    <div class="sidebar">
-      <h2>SHOP NOW</h2>
+  <div class="sidebar-right">
+    <h2>SHOP NOW</h2>
 
-      <a href="https://www.amazon.com/dp/B0DQK5T6TC" target="_blank" class="button-link">
+    <div class="button-area">
+      <a href="https://www.amazon.com/dp/B0DQK5T6TC" target="_blank">
         <button>Buy on Amazon</button>
       </a>
-
-      <div class="email">
-        Prefer to order directly?<br>
-        Email us at <a href="mailto:contact@valmy.us">contact@valmy.us</a>
-      </div>
     </div>
 
+    <div class="email-text">
+      <p>Prefer to order directly?<br/>
+      Email us at<br/>
+      <strong>contact@valmy.us</strong></p>
+    </div>
   </div>
 
 </body>
