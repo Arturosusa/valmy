@@ -9,6 +9,9 @@
             margin: 0;
             padding: 0;
             background-color: #f8f8f8;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
             font-family: Arial, sans-serif;
         }
 
@@ -24,7 +27,7 @@
             object-fit: cover;
         }
 
-        .right-panel {
+        .sidebar-content {
             position: absolute;
             top: 0;
             right: 0;
@@ -34,21 +37,19 @@
             color: white;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: flex-start;
+            align-items: center;
             padding-top: 20px;
         }
 
-        .right-panel h2 {
-            margin: 0;
-            font-size: 18px;
-            font-weight: bold;
-            letter-spacing: 1px;
+        .sidebar-content h2 {
+            margin-top: 10px;
+            font-size: 20px;
         }
 
         .button-area {
             margin-top: auto;
-            margin-bottom: 70px;
+            margin-bottom: 60px;
             text-align: center;
         }
 
@@ -57,4 +58,58 @@
         }
 
         .button-area button {
-            padding
+            padding: 10px 20px;
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .email-text {
+            font-size: 12px;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar-content {
+                width: 100%;
+                height: auto;
+                position: relative;
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .container img {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="web2-valmy.jpg" alt="VALMY - Beauty and Style">
+
+        <div class="sidebar-content">
+            <h2>SHOP NOW</h2>
+
+            <div class="button-area">
+                <a href="https://www.amazon.com/dp/B0DQK5T6TC" target="_blank">
+                    <button>Buy on Amazon</button>
+                </a>
+            </div>
+
+            <div class="email-text">
+                Prefer to order directly?<br>Email us at<br><strong>contact@valmy.us</strong>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
